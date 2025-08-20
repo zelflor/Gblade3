@@ -1,0 +1,123 @@
+div.div-input-container {
+    display: flex;
+    width: 215px;
+    height: calc(32px - var(--number-4) * 2);
+    padding: var(--number-4) var(--number-6);
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--number-4);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    background: var(--color-container);
+    position: relative;
+}
+div.div-input-container input {
+    color: var(--color-text);
+    font-family: Sora;
+    font-size: 12px;
+    flex: 1 0 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+div.div-input-container svg {
+    width: 16px;
+    height: 16px;
+}
+div.div-input-container path {
+    stroke-width: 1.5px;
+    stroke: var(--color-text);
+}
+
+div.div-upload-container {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    padding: var(--number-4) var(--number-6);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-4);
+    position: relative;
+    aspect-ratio: 1/1;
+    border-radius: var(--number-4);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    background: var(--color-container);
+}
+div.div-upload-container:hover {
+    background: var(--color-hover);
+}
+div.div-upload-container svg path {
+    stroke: var(--color-text);
+}
+div.div-upload-container p {
+    color: var(--color-text);
+    text-align: center;
+    font-family: Sora;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+div.div-upload-container input {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    flex-shrink: 0;
+    height: 20px;
+    border-radius: var(--number-12);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background: var(--color-container);
+  border-radius: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background-color 0.3s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  top: 2px;
+  background-color: var(--color-desc);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--color-green-400);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(14px); 
+   background-color: var(--color-strong);
+}

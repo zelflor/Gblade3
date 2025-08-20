@@ -1,0 +1,17 @@
+div.div-badge {
+    display: inline-flex;
+    height: calc(26px - var(--number-4) * 2);
+    padding: var(--number-4) var(--number-12);
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-8);
+    border-radius: var(--number-36);
+    border: var(--number-stroke-size) solid var(--color-strong);
+    color: var(--color-strong);
+    text-align: center;
+    font-family: Sora;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

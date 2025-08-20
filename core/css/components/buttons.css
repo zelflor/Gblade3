@@ -1,0 +1,148 @@
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+button.type\:default {
+    display: inline-flex;
+    height: 32px;
+    padding: var(--number-4) var(--number-12);
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-8);
+    flex-shrink: 0;
+    border-radius: var(--number-24);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    background: var(--color-container);
+}
+button.type\:default p {
+    color: var(--color-strong);
+    text-align: center;
+    font-family: Sora;
+    font-size: var(--number-14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+button.type\:default svg path {
+    stroke: var(--color-strong);
+}
+button.type\:default:hover {
+    background: var(--color-hover);
+}
+
+button.type\:square {
+    display: inline-flex;
+    height: 32px;
+    padding: var(--number-4) var(--number-12);
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-8);
+    flex-shrink: 0;
+    border-radius: var(--number-4);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    background: var(--color-container);
+}
+button.type\:square p {
+    color: var(--color-strong);
+    text-align: center;
+    font-family: Sora;
+    font-size: var(--number-14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+button.type\:square svg path {
+    stroke: var(--color-strong);
+}
+button.type\:square:hover {
+    background: var(--color-hover);
+}
+
+button.type\:fill {
+    display: inline-flex;
+    height: 32px;
+    padding: var(--number-4) var(--number-12);
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-8);
+    flex-shrink: 0;
+    border-radius: var(--number-24);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    background: var(--color-strong);
+}
+button.type\:fill p {
+    color: var(--color-background);
+    text-align: center;
+    font-family: Sora;
+    font-size: var(--number-14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+button.type\:fill svg path {
+    stroke: var(--color-background);
+}
+button.type\:fill:hover {
+    background: var(--color-strong);
+}
+
+
+button.type\:circle {
+    display: inline-flex;
+    width: 32px;
+    height: 32px;
+    padding: var(--number-4);
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-8);
+    flex-shrink: 0;
+    border-radius: var(--number-24);
+    border: var(--number-stroke-size) solid var(--color-stroke);
+    background: var(--color-container);
+}
+button.type\:circle svg path {
+    stroke: var(--color-strong);
+}
+button.type\:circle:hover {
+    background: var(--color-hover);
+}
+
+
+button.type\:transparent {
+    display: inline-flex;
+    height: 32px;
+    padding: var(--number-4) var(--number-12);
+    justify-content: center;
+    align-items: center;
+    gap: var(--number-8);
+    flex-shrink: 0;
+    border-radius: var(--number-24);
+    border: none;
+    background: none;
+}
+button.type\:transparent p {
+    color: var(--color-desc);
+    text-align: center;
+    font-family: Sora;
+    font-size: var(--number-14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+button.type\:transparent svg path {
+    stroke: var(--color-desc);
+}
+button.type\:transparent:hover svg path{
+    stroke: var(--color-strong);
+}
+button.type\:transparent:hover p {
+    color: var(--color-strong);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: auto;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+}

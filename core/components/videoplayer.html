@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link rel="stylesheet" href="../main.css">
+</head>
+<body id="dark">
+    <div class="div-videoplayer-page-responsive">
+        
+    <video class="video-fit-content video-link" muted src=""></video>
+    <video class="video-fit-content-blur video-link" muted src=""></video>
+    <div class="div-overlay-zone" onclick="togglePlayPause()"></div>
+    <div class="div-menu-video-flex">
+         <div class="div-slider-time">
+            
+            <div class="div-color-time">
+                <div class="div-round-element"></div>
+            </div>
+         </div>
+         <div class="div-btns-container-flex">
+            <div class="btn-container btn-container-play" onclick="togglePlayPause()">
+                <svg class="svg-play fill:true" style="display: flex;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 3L19 12L5 21V3Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+
+                <svg class="svg-pause fill:true" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M10 3L10.1025 3.00488C10.6067 3.05621 11 3.48232 11 4V20C11 20.5523 10.5523 21 10 21H6C5.44772 21 5 20.5523 5 20V4L5.00488 3.89746C5.05621 3.39333 5.48232 3 6 3H10ZM18 3L18.1025 3.00488C18.6067 3.05621 19 3.48232 19 4V20C19 20.5523 18.5523 21 18 21H14C13.4477 21 13 20.5523 13 20V4L13.0049 3.89746C13.0562 3.39333 13.4823 3 14 3H18Z" />
+                </svg>
+            </div>
+            <div class="btn-container btn-container-volume">
+                <svg onclick="setMute()" style="display: none;" class="svg-little-volume stroke:true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15.54 8.45996C16.4774 9.3976 17.004 10.6691 17.004 11.995C17.004 13.3208 16.4774 14.5923 15.54 15.53M11 5L6 9H2V15H6L11 19V5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg onclick="setMute()" style="display: none;" class="svg-medium-volume stroke:true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M15.54 8.46008C16.4774 9.39772 17.004 10.6693 17.004 11.9951C17.004 13.3209 16.4774 14.5924 15.54 15.5301M19.0698 4.93018C20.9445 6.80545 21.9977 9.34853 21.9977 12.0002C21.9977 14.6518 20.9445 17.1949 19.0698 19.0702M11 5.00012L6 9.00012H2V15.0001H6L11 19.0001V5.00012Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg onclick="setMute()" style="display: flex;" class="svg-mute-volume stroke:true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 9L16 15M16 9L22 15M11 5L6 9H2V15H6L11 19V5Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="div-slider-volume">
+                    <div class="div-color-volume"> <div class="div-round-element"></div></div>
+                </div>
+            </div>
+            <div class="div-space-between"></div>
+             <div class="btn-container btn-container-setting">
+                <svg class="fill:true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.78 2H12.22C12.7504 2 13.2591 2.21071 13.6342 2.58579C14.0093 2.96086 14.22 3.46957 14.22 4V4.18C14.2204 4.53073 14.3129 4.87519 14.4885 5.17884C14.664 5.48248 14.9163 5.73464 15.22 5.91L15.65 6.16C15.954 6.33554 16.2989 6.42795 16.65 6.42795C17.0011 6.42795 17.346 6.33554 17.65 6.16L17.8 6.08C18.2589 5.81526 18.8042 5.74344 19.316 5.88031C19.8278 6.01717 20.2645 6.35154 20.53 6.81L20.75 7.19C21.0147 7.64893 21.0866 8.19416 20.9497 8.706C20.8128 9.21783 20.4785 9.65445 20.02 9.92L19.87 10.01C19.5648 10.1862 19.3116 10.4399 19.136 10.7455C18.9604 11.051 18.8686 11.3976 18.87 11.75V12.25C18.8686 12.6024 18.9604 12.949 19.136 13.2545C19.3116 13.5601 19.5648 13.8138 19.87 13.99L20.02 14.07C20.4785 14.3356 20.8128 14.7722 20.9497 15.284C21.0866 15.7958 21.0147 16.3411 20.75 16.8L20.53 17.19C20.2645 17.6485 19.8278 17.9828 19.316 18.1197C18.8042 18.2566 18.2589 18.1847 17.8 17.92L17.65 17.84C17.346 17.6645 17.0011 17.5721 16.65 17.5721C16.2989 17.5721 15.954 17.6645 15.65 17.84L15.22 18.09C14.9163 18.2654 14.664 18.5175 14.4885 18.8212C14.3129 19.1248 14.2204 19.4693 14.22 19.82V20C14.22 20.5304 14.0093 21.0391 13.6342 21.4142C13.2591 21.7893 12.7504 22 12.22 22H11.78C11.2496 22 10.7409 21.7893 10.3658 21.4142C9.99072 21.0391 9.78 20.5304 9.78 20V19.82C9.77964 19.4693 9.68706 19.1248 9.51154 18.8212C9.33602 18.5175 9.08374 18.2654 8.78 18.09L8.35 17.84C8.04596 17.6645 7.70108 17.5721 7.35 17.5721C6.99893 17.5721 6.65404 17.6645 6.35 17.84L6.2 17.92C5.74107 18.1847 5.19584 18.2566 4.684 18.1197C4.17217 17.9828 3.73555 17.6485 3.47 17.19L3.25 16.81C2.98526 16.3511 2.91345 15.8058 3.05031 15.294C3.18717 14.7822 3.52154 14.3456 3.98 14.08L4.13 13.99C4.43521 13.8138 4.68844 13.5601 4.86405 13.2545C5.03965 12.949 5.1314 12.6024 5.13 12.25V11.74C5.1279 11.391 5.03448 11.0486 4.85905 10.7468C4.68362 10.4451 4.43228 10.1945 4.13 10.02L3.98 9.92C3.52154 9.65445 3.18717 9.21783 3.05031 8.706C2.91345 8.19416 2.98526 7.64893 3.25 7.19L3.47 6.81C3.73555 6.35154 4.17217 6.01717 4.684 5.88031C5.19584 5.74344 5.74107 5.81526 6.2 6.08L6.35 6.16C6.65404 6.33554 6.99893 6.42795 7.35 6.42795C7.70108 6.42795 8.04596 6.33554 8.35 6.16L8.78 5.91C9.08374 5.73464 9.33602 5.48248 9.51154 5.17884C9.68706 4.87519 9.77964 4.53073 9.78 4.18V4C9.78 3.46957 9.99072 2.96086 10.3658 2.58579C10.7409 2.21071 11.2496 2 11.78 2ZM12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" />
+                </svg>
+                <div class="div-menu-settings" style="display: none;">
+                    <div class="btn-content-param">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M11.3333 1.33325L14 3.99992M14 3.99992L11.3333 6.66659M14 3.99992H4.66667C3.95942 3.99992 3.28115 4.28087 2.78105 4.78097C2.28095 5.28106 2 5.95934 2 6.66659V7.33325M4.66667 14.6666L2 11.9999M2 11.9999L4.66667 9.33325M2 11.9999H11.3333C12.0406 11.9999 12.7189 11.719 13.219 11.2189C13.719 10.7188 14 10.0405 14 9.33325V8.66659" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <p>Read in loop</p>
+                        <label class="switch">
+                            <input type="checkbox" id="loop-video">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container btn-container-fullscreen" onclick="toggleFullscreen()">
+                <svg class="stroke:true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M8 3H5C4.46957 3 3.96086 3.21071 3.58579 3.58579C3.21071 3.96086 3 4.46957 3 5V8M21 8V5C21 4.46957 20.7893 3.96086 20.4142 3.58579C20.0391 3.21071 19.5304 3 19 3H16M3 16V19C3 19.5304 3.21071 20.0391 3.58579 20.4142C3.96086 20.7893 4.46957 21 5 21H8M16 21H19C19.5304 21 20.0391 20.7893 20.4142 20.4142C20.7893 20.0391 21 19.5304 21 19V16" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+         </div>
+       
+    </div>
+</div>
+
+<script>
+const videoURL = "../assets/";
+
+const videoElements = document.querySelectorAll('.video-link');
+videoElements.forEach(element => {
+    element.src = videoURL;
+});
+
+function togglePlayPause() {
+    const btnContainers = document.querySelectorAll('.btn-container-play');
+    videoElements.forEach((video, index) => {
+        const btnContainer = btnContainers[index];
+        const playIcon = btnContainer.querySelector('.svg-play');
+        const pauseIcon = btnContainer.querySelector('.svg-pause');
+        if (video.paused) {
+            videoElements.forEach(v => v.play());
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'flex';
+        } else {
+            videoElements.forEach(v => v.pause());
+            playIcon.style.display = 'flex';
+            pauseIcon.style.display = 'none';
+        }
+    });
+}
+
+function PauseVideo() {
+        const btnContainers = document.querySelectorAll('.btn-container-play');
+    videoElements.forEach((video, index) => {
+        const btnContainer = btnContainers[index];
+        const playIcon = btnContainer.querySelector('.svg-play');
+        const pauseIcon = btnContainer.querySelector('.svg-pause');
+        videoElements.forEach(v => v.pause());
+        playIcon.style.display = 'flex';
+        pauseIcon.style.display = 'none';
+    });
+}
+
+const globalProgressBar = document.querySelector('.div-color-time');
+const slider = document.querySelector('.div-slider-time');
+
+const updateGlobalProgress = (video) => {
+    const currentTime = video.currentTime;
+    const duration = video.duration;
+    if (!isNaN(duration) && duration > 0) {
+        const percent = (currentTime / duration) * 100;
+        globalProgressBar.style.width = `${percent}%`;
+    }
+};
+
+videoElements.forEach(video => {
+    video.addEventListener('loadedmetadata', () => {
+        video.addEventListener('timeupdate', () => updateGlobalProgress(video));
+    });
+    video.addEventListener('play', () => {
+        videoElements.forEach(v => {
+            if (v !== video) {
+                v.currentTime = video.currentTime;
+                v.play();
+            }
+        });
+    });
+    video.addEventListener('pause', () => {
+        videoElements.forEach(v => {
+            if (v !== video) {
+                v.pause();
+            }
+        });
+    });
+});
+let isDragging = false;
+
+const updateTimeFromSlider = (e) => {
+    const rect = slider.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const width = rect.width;
+    const percent = Math.min(Math.max(x / width, 0), 1);
+    const duration = videoElements[0].duration;
+    const newTime = percent * duration;
+    videoElements.forEach(video => {
+        video.currentTime = newTime;
+    });
+    globalProgressBar.style.width = `${percent * 100}%`;
+};
+
+slider.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    updateTimeFromSlider(e);
+});
+
+window.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        updateTimeFromSlider(e);
+    }
+});
+
+window.addEventListener('mouseup', () => {
+    isDragging = false;
+});
+
+function toggleFullscreen() {
+    const player = document.querySelector('.div-videoplayer-page-responsive');
+
+    if (!player) return;
+
+    if (!document.fullscreenElement) {
+        if (player.requestFullscreen) {
+            player.requestFullscreen();
+        } else if (player.webkitRequestFullscreen) {
+            player.webkitRequestFullscreen();
+        } else if (player.msRequestFullscreen) {
+            player.msRequestFullscreen();
+        }
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+        }
+    }
+}
+
+</script>
+
+
+<script>
+    let inactivityTimer;
+    const menu = document.querySelector('.div-menu-video-flex');
+
+    function startInactivityTimer() {
+        clearTimeout(inactivityTimer);
+        if (menu.classList.contains('fade-out')) {
+            menu.classList.remove('fade-out');
+            void menu.offsetWidth;
+        }
+
+        inactivityTimer = setTimeout(() => {
+            menu.classList.add('fade-out');
+        }, 4000);
+    }
+
+    window.addEventListener('mousemove', startInactivityTimer);
+    window.addEventListener('touchstart', startInactivityTimer);
+
+    startInactivityTimer();
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".video-fit-content.video-link");
+  const slider = document.querySelector(".div-slider-volume");
+  const colorBar = document.querySelector(".div-color-volume");
+
+  const svgMute = document.querySelector(".svg-mute-volume");
+  const svgLittle = document.querySelector(".svg-little-volume");
+  const svgMedium = document.querySelector(".svg-medium-volume");
+
+  if (!video || !slider || !colorBar || !svgMute || !svgLittle || !svgMedium) return;
+
+  const applyVolumeCurve = x => Math.pow(x, 2.2);
+
+  const updateVolumeIcons = vol => {
+    svgMute.style.display = "none";
+    svgLittle.style.display = "none";
+    svgMedium.style.display = "none";
+
+    if (vol < 0.03) {
+      svgMute.style.display = "flex";
+    } else if (vol < 0.1) {
+      svgLittle.style.display = "flex";
+    } else {
+      svgMedium.style.display = "flex";
+    }
+  };
+
+  const updateVolume = event => {
+    const rect = slider.getBoundingClientRect();
+    const clickX = event.clientX - rect.left;
+    const percentage = Math.max(0, Math.min(1, clickX / rect.width));
+    const perceptualVolume = applyVolumeCurve(percentage);
+    video.volume = perceptualVolume;
+    video.muted = perceptualVolume < 0.01;
+    colorBar.style.width = `${percentage * 100}%`;
+    updateVolumeIcons(perceptualVolume);
+  };
+
+  slider.addEventListener("click", updateVolume);
+
+  let isDragging = false;
+  slider.addEventListener("mousedown", () => { isDragging = true; });
+  document.addEventListener("mouseup", () => { isDragging = false; });
+  document.addEventListener("mousemove", e => {
+    if (isDragging) updateVolume(e);
+  });
+
+  window.setMute = () => {
+    video.muted = !video.muted;
+    if (video.muted) {
+      colorBar.style.width = "0%";
+      updateVolumeIcons(0);
+    } else {
+      const linearVolume = Math.pow(video.volume, 1 / 2.2);
+      colorBar.style.width = `${linearVolume * 100}%`;
+      updateVolumeIcons(video.volume);
+    }
+  };
+});
+
+
+</script>
+
+<script>
+document.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+    const video = document.querySelector(".video-fit-content.video-link");
+
+    if (!video) return;
+
+    switch (key) {
+        case "k":
+        case " ":
+            togglePlayPause();
+            break;
+
+        case "f":
+            toggleFullscreen();
+            break;
+
+        case "arrowleft":
+            
+            video.currentTime = Math.max(0, video.currentTime - 5);
+            PauseVideo();
+            break;
+
+        case "arrowright":
+            
+            video.currentTime = Math.min(video.duration, video.currentTime + 5);
+            PauseVideo();
+            break;
+    }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".btn-container-setting");
+  const menu = document.querySelector(".div-menu-settings");
+
+  if (!btn || !menu) {
+    return;
+  }
+
+  btn.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (target === btn) {
+      toggleMenu(menu);
+      return;
+    }
+
+    const firstChild = btn.firstElementChild;
+    if (firstChild && firstChild.tagName.toLowerCase() === "svg" && target.closest("svg") === firstChild) {
+      toggleMenu(menu);
+      return;
+    }
+  });
+
+  function toggleMenu(menu) {
+    const isHidden = getComputedStyle(menu).display === "none";
+    menu.style.display = isHidden ? "flex" : "none";
+  }
+});
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const checkbox = document.getElementById("loop-video");
+  const videos = document.querySelectorAll(".video-link");
+
+  checkbox.addEventListener("change", () => {
+    const shouldLoop = checkbox.checked;
+
+    videos.forEach(video => {
+      video.loop = shouldLoop;
+    });
+  });
+});
+
+</script>
+</body>
+</html>
+

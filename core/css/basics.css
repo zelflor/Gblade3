@@ -1,0 +1,58 @@
+body {
+    --number-stroke-size: 0.8px;
+    --number-2: 2px;
+    --number-4: 4px;
+    --number-6: 6px;
+    --number-8: 8px;
+    --number-12: 12px;
+    --number-14: 14px;
+    --number-18: 18px;
+    --number-24: 24px;
+    --number-36: 36px;
+    --number-54: 54px;
+    --number-72: 72px;
+    --number-144: 144px;
+    
+    --string-project-name-nw: Overtag;
+    --string-project-name-srv: Yttrium;
+    --string-project-name-anticheat: VorGuard;
+    --string-project-name-map: WorMap;
+
+    /* Tier projects */
+    --string-project-name-MsQuest: MsQuest;
+
+    --effect-shadow:  0px 4px 36px var(--color-container);
+    --effect-blur: blur(calc(var(--number-36) / 2));
+
+    --color-theme: #000;
+    --color-background: #151515;
+    --color-container: rgba(23,23,23,0.5);
+    --color-desc: #B3B3B3;
+    --color-hover: rgba(33,33,33,0.5);
+    --color-stroke: #484848;
+    --color-strong: #FFFFFF;
+    --color-text: #E5E5E5;
+}
+
+
+body#dark {
+    --color-theme: #000;
+    --color-background: #151515;
+    --color-container: rgba(23,23,23,0.5);
+    --color-desc: #B3B3B3;
+    --color-hover: rgba(33,33,33,0.5);
+    --color-stroke: #484848;
+    --color-strong: #FFFFFF;
+    --color-text: #E5E5E5;
+}
+
+body#light {
+    --color-theme: #fff;
+    --color-background: #E8E8E8;
+    --color-container: rgba(232,232,232,0.5);
+    --color-desc: #424242;
+    --color-hover: rgba(238,238,238,0.5);
+    --color-stroke: #E0E0E0;
+    --color-strong: #0B0B0B;
+    --color-text: #1C1C1C;
+}

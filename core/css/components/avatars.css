@@ -1,0 +1,29 @@
+div.div-avatar {
+    position: relative;
+    width: 100px;
+    aspect-ratio: 1 / 1;
+}
+div.div-avatar img.img-avatar-custom {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+    pointer-events: none;
+    border-radius: 50%;
+    background-color: var(--color-container);
+}
+div.div-avatar:hover img.img-avatar-custom {
+    background-color: var(--color-hover);
+
+}
+div.div-avatar img.img-frame {
+    width: 124%;
+    height: 124%;
+    position: absolute;
+    user-select: none;
+    pointer-events: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

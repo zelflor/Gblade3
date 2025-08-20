@@ -1,0 +1,74 @@
+.div-tag {
+    display: flex;
+    padding: var(--number-2);
+    align-items: center;
+    position: relative;
+    gap: var(--number-2);
+    border-radius: var(--number-4);
+    background: var(--color-container);
+}
+.div-tag p {
+    text-align: center;
+    font-family: Sora;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.div-tag svg {
+    width: 12px;
+    height: 12px;
+}
+.div-tag::after {
+    content: '';
+    border-radius: var(--number-4);
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+}
+
+.div-tag.color\:green::after {
+ 
+    background: var(--color-green-600)!important;
+}
+.div-tag.color\:green p {
+    color: var(--color-green-600)!important;
+}
+.div-tag.color\:green svg path {
+    stroke: var(--color-green-600);
+}
+
+.div-tag.color\:red::after {
+ 
+    background: var(--color-red-600)!important;
+}
+.div-tag.color\:red p {
+    color: var(--color-red-600)!important;
+}
+.div-tag.color\:red svg path {
+    stroke: var(--color-red-600);
+}
+.div-tag.color\:orange::after {
+ 
+    background: var(--color-orange-600)!important;
+}
+.div-tag.color\:orange p {
+    color: var(--color-orange-600)!important;
+}
+.div-tag.color\:orange svg path {
+    stroke: var(--color-orange-600);
+}
+
+.div-tag.color\:pink::after {
+ 
+    background: var(--color-pink-600)!important;
+}
+.div-tag.color\:pink p {
+    color: var(--color-pink-600)!important;
+}
+.div-tag.color\:pink svg path {
+    stroke: var(--color-pink-600);
+}

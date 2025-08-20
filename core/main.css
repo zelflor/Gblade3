@@ -1,0 +1,204 @@
+@import url(./css/colors.css);
+@import url(./css/basics.css);
+@import url(./css/components/buttons.css);
+@import url(./css/components/inputs.css);
+@import url(./css/components/badges.css);
+@import url(./css/components/tags.css);
+@import url(./css/components/videoplayer.css);
+@import url(./css/components/avatars.css);
+@import url(./css/projects.css);
+
+@font-face {
+    font-family: Sora;
+    src: url('./fonts/Sora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal italic;
+}
+@font-face {
+    font-family: Unbounded;
+    src: url('./fonts/Unbounded-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal italic;
+}
+
+* {
+  
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    font-family: Sora;
+}
+
+/* GoldBlade Engine */
+
+body::selection,
+body::-moz-selection,
+*::selection,
+*::-moz-selection { 
+  background: var(--color-red-500); 
+  text-shadow: 1px 1px 2px var(--color-red-950); 
+  color: var(--color-red-50); 
+}
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-strong) var(--color-background);
+  }
+
+  *::-webkit-scrollbar {
+    width: var(--number-6);
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color:var(--color-strong);
+    border-radius: var(--number-6);
+    border: 0px none var(--color-background);
+  }
+
+
+body {
+    position: absolute;
+    width: 100svw;
+    height: 100svh;
+    background: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;
+    overflow-y: auto;
+}
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+div.div-responsive-page {
+    position: relative;
+
+    width: 100svw;
+   
+    z-index: 1;
+}
+
+
+
+  .div-footer {
+      position: relative;
+      height: auto;
+      z-index: 8;
+      width: calc(100svw - 0rem);
+      background: var(--color-container);
+      background: linear-gradient(180deg, var(--color-container) 0%, var(--color-theme) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem 1rem;
+      box-sizing: border-box;
+      gap: 1rem;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .footer-icons {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .icon-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--color-desc);
+      font-size: 0.9rem;
+    }
+
+    .icon-item svg {
+      margin-bottom: 0.5rem;
+      fill: currentColor;
+      width: 64px;
+      height: 64px;
+    }
+    .icon-item:hover {
+        text-decoration: underline;
+        color: var(--color-strong);
+    }
+    .icon-item:hover svg {
+        opacity: .5;
+        
+    }
+    .footer-links {
+      flex: 1;
+      min-width: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .footer-links h3 {
+        color: var(--color-text);
+        text-align: left;
+        font-family: Sora;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    .footer-links a {
+      text-decoration: none;
+      color: var(--color-text);
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-strong);
+      text-decoration: underline;
+    }
+
+    .footer-copyright {
+      font-size: 0.8rem;
+      color: var(--color-desc);
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .footer-section,
+      .footer-links {
+        width: 100%;
+      }
+
+      .footer-icons {
+        justify-content: center;
+      }
+    .footer-links h3 {
+      text-align: center;
+    }
+    }
